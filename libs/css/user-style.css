@@ -1,0 +1,700 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+body{
+    display: flex;
+}
+
+
+/* -------------------------------------
+    SIDEBAR STYLES
+------------------------------------- */
+.sidebar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 110px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: white;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: #052659;
+}
+
+.sidebar:hover{
+    width: 250px;
+    transition: 0.5s;
+}
+
+.logo{
+    height: 80px;
+    padding: 16px;
+}
+
+.menu{
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li{
+    padding: 1rem;
+    margin: 10px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu li:hover{
+    background: #7da0ca;
+}
+
+.menu li.active{
+    background: #7dace4;
+}
+
+.menu a{
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.menu a span{
+    overflow: hidden;
+}
+
+.menu a i{
+    font-size: 1.2rem;
+}
+
+.logout{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+/* -------------------------------------
+    MAIN && CONTENT BODY STYLES
+------------------------------------- */
+.main_content{
+    position: relative;
+    background: lightgray;
+    width: 100%;
+    padding: 1rem;
+}
+
+.header_wrapper img{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.header_wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: white;
+    border-radius: 10px;
+    padding: 10px 2rem;
+    margin-bottom: 1rem;
+}
+
+.header_title{
+    color: #5483b3;
+}
+
+.user_info{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search_bar{
+    background: lightgray;
+    border-radius: 15px;
+    color: gray;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 12px;
+}
+
+
+/* -------------------------------------
+    PANEL - STYLES
+------------------------------------- */
+.panel_container{
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.panel_wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.main_title{
+    color: #5483b3;
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+
+.panel_content{
+    background: lightblue;
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 290px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+}
+
+.panel_content:hover{
+    transform: translateY(-5px);
+}
+
+.panel_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.amount{
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.amount_value{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.icon{
+    color: white;
+    padding: 1rem;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    background: red;
+}
+
+
+/* -------------------------------------
+   PROFILE STYLES
+------------------------------------- */
+.account{
+    flex: 2;
+    width: 50%;
+    margin-left: 10px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    height: auto;
+}
+
+.account_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+}
+
+.account_title{
+    font-size: 24px;
+    color: #3a7bd5;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.btn_container{
+    margin-right: 5px;
+}
+
+.btn_cancel{
+    width: 8em;
+    height: 3em;
+    cursor: pointer;
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+    color: #FF6961;
+    font-weight: bold;
+    margin-right: 5px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1);
+    transition-duration: 0.2s;
+}
+
+.btn_cancel:hover{
+    background-color:#FF6961;
+    color: white;
+}
+
+.btn_save{
+    width: 8em;
+    height: 3em;
+    cursor: pointer;
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+    color: #3fc495;
+    font-weight: bold;
+    margin-right: 5px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1);
+    transition-duration: 0.2s;
+}
+
+.btn_save:hover{
+    background-color: #3fc495;
+    color: #fff;
+}
+
+.profile_btn{
+    width: 4em;
+    height: 2em;
+    cursor: pointer;
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+    color: #5483b3;
+    font-weight: bold;
+    margin-right: 5px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1);
+    transition-duration: 0.3s;
+}
+
+.profile_btn:hover{
+    background-color: #3fc495;
+    color: white;
+}
+
+.account_edit{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.input_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px;;
+}
+
+.input_container label{
+    color: #5483b3;
+    font-size: 18px;
+}
+
+.input_container input{
+    height: 35px;
+    border: 1.5px solid gray;
+    border-radius: 5px;
+    color: black;
+    font-size: 17px;
+    padding: 5px;
+}
+
+.input_container select{
+    height: 35px;
+    border: 1.5px solid gray;
+    border-radius: 5px;
+    color: black;
+    font-size: 17px;
+    text-transform: capitalize;
+}
+
+
+/* -------------------------------------
+    ALERT MESSAGE STYLES
+------------------------------------- */
+.message-box-failed{
+    margin-bottom: 15px;
+	color: #842029;
+	border: #f5c2c7;
+	text-align: center;
+    font-weight: bold;
+	padding: 16px;
+	background-color: #f8d7da;
+	border-radius: .25rem;
+}
+
+.message-box-info{
+	color: #055160;
+	border: #b6effb;
+	text-align: center;
+    font-weight: bold;
+	padding: 16px;
+	background-color: #cff4fc;
+	border-radius: .25rem;
+}
+
+.message-box-success{
+    width: 100%;
+    margin: auto;
+    margin-bottom: 15px;
+	color: #0f5132;
+	border: #badbcc;
+	text-align: center;
+    font-weight: bold;
+	padding: 16px;
+	background-color: #d1e7dd;
+	border-radius: .25rem;
+}
+
+/* -------------------------------------
+    ORDER PAGE STYLES
+------------------------------------- */
+.panel_wrapper2{
+    background: white;
+    border-radius: 10px;
+}
+
+.panel_wrapper2 .table_detail{
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    padding: 40px 20px;
+    margin: 0 auto;
+}
+
+.panel_wrapper2 .table_detail h2{
+    font-size: 38px;
+    font-weight: bold;
+    color: #3a7bd5;
+    text-transform: uppercase;
+}
+
+.panel_wrapper2 .table_detail p{
+    font-size: 15px;
+}
+
+.panel_wrapper2 .grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 0px;
+    padding: 20px;
+}
+
+.panel_wrapper2 .grid .box{
+    width: 250px;
+    margin: 5px;
+    border: 1px solid #eee;
+    text-align: center;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px 5px rgba(0, 0, 0, 0.05);
+}
+
+.panel_wrapper2 .grid .box .title_box{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.panel_wrapper2 .grid .box .price_grid{
+    margin-bottom: 20px;
+}
+
+.panel_wrapper2 .grid .box .price_grid b{
+    display: block;
+    font-size: 40px;
+    margin-bottom: -5px;
+}
+
+.panel_wrapper2 .grid .box .features > *{
+    color: #3a7bd5;
+    font-weight: bolder;
+    padding: 8px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.panel_wrapper2 .grid .box .btn2 button{
+    width: 100%;
+    margin: 25px 0px 0px;
+    padding: 10px;
+    background: linear-gradient(to bottom, #3a7bd5, #3a6073);
+    color: white;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.panel_wrapper2 .grid .box:hover{
+    transform: scale(1.1);
+    background: linear-gradient(to bottom, #7da0ca, #c1e8ff);
+    transition-duration: 0.4s;
+    color: #fff;
+}
+
+.panel_wrapper2 .grid .box .title_box .price_table:hover{
+    color: white;
+}
+
+.panel_wrapper2 .grid .box .features > *:hover{
+    color: white;
+}
+
+.panel_wrapper2 .grid .box .button button:hover{
+    background-color: white;
+    color: #3a6073;
+}
+
+.uni-img{
+    width: 190px;
+}
+
+
+/* -------------------------------------
+    TABLE DATA STYLES
+------------------------------------- */
+.table_wrapper{
+    background: white;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    padding: 2rem 2rem;
+    overflow-x: auto;
+}
+
+.table_container{
+    width: 100%;
+    margin: 0 auto;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead{
+    background-color: #5483b3;
+    color: white;
+}
+
+th{
+    padding: 15px;
+    text-align: center;
+}
+
+tbody{
+    background: #ebeaea;
+}
+
+td{
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    color: black;
+}
+
+tr:nth-child(even){
+    background: white;
+}
+
+.table_container .data_btn{
+    color: maroon;
+    background: none;
+    cursor: pointer;
+}
+
+tfoot .table_foot{
+    background-color: #5483b3;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+}
+
+tfoot td{
+    padding: 15px;
+    color: white;
+}
+
+
+/* -------------------------------------
+    ACTION BUTTON STYLES
+------------------------------------- */
+.action_btn1, 
+.action_btn2, 
+.action_btn3{
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    background-color: white;
+    transition-duration: 0.3s;
+    margin-right: 4px;
+    padding: 4px 6px;
+}
+
+.action_btn1{
+    border: 2px solid blue;
+    color: blue;
+}
+
+.action_btn2{
+    border: 2px solid green;
+    color: green;
+
+}
+.action_btn3{
+    border: 2px solid red;
+    color: red;
+}
+
+.action_btn1:hover{
+    background-color: blue;
+    color: white;
+    border: 2px solid transparent;
+
+}
+.action_btn2:hover{
+    background-color: green;
+    color: white;
+    border: 2px solid transparent;
+}
+
+.action_btn3:hover{
+    background-color: red;
+    color: white;
+    border: 2px solid transparent;
+}
+
+
+/* -------------------------------------
+   STATUS MESSAGE STYLES
+------------------------------------- */
+.status-message-pending{
+    color: #664d03;
+    background-color: #fff3cd;
+    border-color: #ffecb5;
+    border-radius: .25rem;
+    padding: 15px;
+}
+
+.status-message-approved{
+    color: #0f5132;
+    background-color: #d1e7dd;
+    border-color: #badbcc;
+    border-radius: .25rem;
+    padding: 15px;
+}
+
+.status-message-declined{
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+    border-radius: .25rem;
+    padding: 15px;
+}
+
+.status-message-updated{
+    color: #004085;
+    background-color: #cce5ff;
+    border-color: #b8daff;
+    border-radius: .25rem;
+    padding: 15px;
+}
+
+/* -------------------------------------
+    RESPONSIVE AND MOBILE FRIENDLY STYLES
+------------------------------------- */
+@media only screen and (max-width: 768px) {
+    .sidebar {
+        width: 80px;
+        padding: 0.5rem;
+    }
+
+    .sidebar:hover {
+        width: 200px;
+    }
+
+    .menu a {
+        gap: 0.5rem;
+        font-size: 12px;
+    }
+
+    .header_wrapper {
+        padding: 10px 1rem;
+    }
+
+    .account{
+        margin: 0;
+    }
+
+    .account_header{
+        flex-direction: column;
+    }
+
+    .account_edit{
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    .input_container{
+        margin: 10px;
+    }
+
+    .input_container input{
+        margin: 10px;
+    }
+
+    .pannel_wrapper2 .grid{
+        gap: 20px;
+    }
+
+    .panel_wrapper2 .grid .box.bx1{
+        transform: scale(1);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .sidebar {
+        width: 160px !important;
+        padding: 0.5rem !important;
+    }
+
+    .sidebar:hover {
+        width: 240px;
+    }
+    
+    .menu a {
+        gap: 0.3rem;
+        font-size: 10px;
+    }
+
+    .header_wrapper {
+        padding: 8px;
+    }
+
+}

@@ -1,0 +1,728 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+body{
+    display: flex;
+}
+
+
+/* -------------------------------------
+    SIDEBAR STYLES
+------------------------------------- */
+.sidebar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 110px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: white;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: maroon;
+}
+
+.sidebar:hover{
+    width: 240px;
+    transition: 0.5s;
+}
+
+.logo{
+    height: 80px;
+    padding: 16px;
+
+}
+
+.menu{
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li{
+    padding: 1rem;
+    margin: 10px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu li:hover{
+    background: #d67f7f;
+}
+
+.menu li.active{
+    background: #d67f7f !important;
+}
+
+.menu a{
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.menu a span{
+    overflow: hidden;
+}
+
+.menu a i{
+    font-size: 1.2rem;
+}
+
+.logout{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+/* -------------------------------------
+    MAIN CONTENT && BODY STYLES
+------------------------------------- */
+.main_content{
+    position: relative;
+    background: lightgray;
+    width: 100%;
+    padding: 1rem;
+}
+
+.header_wrapper img{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.header_wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: white;
+    border-radius: 10px;
+    padding: 10px 2rem;
+    margin-bottom: 1rem;
+}
+
+.header_title{
+    color: maroon;
+}
+
+.user_info{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+/* -------------------------------------
+    PANEL CONTAINER STYLES
+------------------------------------- */
+.panel_container{
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.panel_wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.main_title{
+    color: maroon;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 15px;
+    width: 100%;
+    text-align: left;
+}
+
+.panel_content{
+    background: lightblue;
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 290px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+}
+
+.panel_content:hover{
+    transform: translateY(-5px);
+}
+
+.panel_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.amount{
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    font-size: 17px;
+    font-weight: bold;
+    color: #3f3838;
+}
+
+.amount_value{
+    padding-top: 13px;
+    font-size: 24px;
+    font-weight: bolder;
+    color: #3f3c3c;
+}
+
+.icon{
+    color: white;
+    padding: 1rem;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    background: red;
+}
+
+
+/* -------------------------------------
+    PANEL COLOR STYLES
+------------------------------------- */
+.lightcolor-1{
+    background: #f08f8f;
+}
+
+.lightcolor-2{
+    background: #67a2f5;
+}
+
+.lightcolor-3{
+    background: #8cee8c;
+}
+
+.lightcolor-4{
+    background: #f1e3ba;
+}
+
+.darkcolor-1{
+    background: #c51414;
+}
+
+.darkcolor-2{
+    background: #3a7bd5;
+}
+
+.darkcolor-3{
+    background: #0b990b;
+}
+
+.darkcolor-4{
+    background: #e9c352;
+}
+
+
+/* -------------------------------------
+    TABLE-DATA STYLES
+------------------------------------- */
+.table_wrapper{
+    background: white;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    padding: 2rem 2rem;
+    overflow-x: auto;
+}
+
+.table_container{
+    width: 100%;
+    margin: 0 auto;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead{
+    background: maroon;
+    color: white;
+}
+
+th{
+    padding: 15px;
+    text-align: center;
+}
+
+tbody{
+    background: lightgray;
+}
+
+td{
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    color: black;
+}
+
+tr:nth-child(even){
+    background: white;
+}
+
+.table_container .data_btn{
+    color: maroon;
+    background: none;
+    cursor: pointer;
+}
+
+tfoot .table_foot{
+    background: maroon;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+}
+
+tfoot td{
+    padding: 15px;
+    color: white;
+}
+
+/* -------------------------------------
+    SEARCH CONTAINER STYLES
+------------------------------------- */
+.search-bar{
+    text-decoration: none;
+    background: #dfdfdf;
+    border-radius: 15px;
+    color: #383838;
+    display: block;
+    gap: 5px;
+    max-width: 100%;
+    width: 94%;
+    padding: 4px 12px;
+    margin-bottom: 20px;
+}
+.search-bar input[type="text"] {
+    width: calc(100% - 70px);
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 14px;
+}
+
+.search-bar i{
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+
+.search-bar i:hover{
+    transform: scale(1.2);
+}
+
+.panel2_wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 94%;
+}
+
+.result_txt{
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    transition-duration: 0.3s;
+    cursor: help;
+}
+
+.result_txt:hover{
+    color: maroon;
+}
+
+/* -------------------------------------
+    ACTION BUTTON STYLES
+------------------------------------- */
+.action_btn1, 
+.action_btn2, 
+.action_btn3{
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    background-color: white;
+    transition-duration: 0.3s;
+    margin-right: 4px;
+    padding: 4px 6px;
+}
+
+.action_btn1{
+    border: 2px solid blue;
+    color: blue;
+}
+
+.action_btn2{
+    border: 2px solid green;
+    color: green;
+}
+
+.action_btn3{
+    border: 2px solid red;
+    color: red;
+}
+
+.action_btn1:hover{
+    background-color: blue;
+    color: white;
+    border: 2px solid transparent;
+}
+
+.action_btn2:hover{
+    background-color: green;
+    color: white;
+    border: 2px solid transparent;
+}
+
+.action_btn3:hover{
+    background-color: red;
+    color: white;
+    border: 2px solid transparent;
+}
+
+
+/* -------------------------------------
+    VIEW REQUEST STYLES
+------------------------------------- */
+.input_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px;;
+}
+
+.input_container label{
+    color: #5483b3;
+    font-size: 18px;
+}
+
+.input_container input{
+    height: 35px;
+    border: 1.5px solid gray;
+    border-radius: 5px;
+    color: black;
+    font-size: 17px;
+    padding: 5px;
+}
+
+.input_container select{
+    height: 35px;
+    border: 1.5px solid gray;
+    border-radius: 5px;
+    color: black;
+    font-size: 17px;
+    text-transform: capitalize;
+}
+
+
+/* -------------------------------------
+   STATUS MESSAGE STYLES
+------------------------------------- */
+.status-message-pending{
+    color: #664d03;
+    background-color: #fff3cd;
+    border-color: #ffecb5;
+    border-radius: .25rem;
+    padding: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.status-message-approved{
+    color: #0f5132;
+    background-color: #d1e7dd;
+    border-color: #badbcc;
+    border-radius: .25rem;
+    padding: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.status-message-declined{
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+    border-radius: .25rem;
+    padding: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.status-message-updated{
+    color: #004085;
+    background-color: #cce5ff;
+    border-color: #b8daff;
+    border-radius: .25rem;
+    padding: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.account{
+    flex: 2;
+    width: 50%;
+    margin-left: 10px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    height: auto;
+}
+
+.account_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+}
+
+.account_title{
+    font-size: 24px;
+    color: #3a7bd5;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.btn_container{
+    margin-right: 5px;
+}
+
+.btn_cancel{
+    width: 8em;
+    height: 3em;
+    cursor: pointer;
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+    color: #FF6961;
+    font-weight: bold;
+    margin-right: 5px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1);
+    transition-duration: 0.2s;
+}
+
+.btn_cancel:hover{
+    background-color:#FF6961;
+    color: white;
+}
+
+.btn_save{
+    width: 8em;
+    height: 3em;
+    cursor: pointer;
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+    color: #3fc495;
+    font-weight: bold;
+    margin-right: 5px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1);
+    transition-duration: 0.2s;
+}
+
+.btn_save:hover{
+    background-color: #3fc495;
+    color: #fff;
+}
+
+.profile_btn{
+    width: 4em;
+    height: 2em;
+    cursor: pointer;
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+    color: #5483b3;
+    font-weight: bold;
+    margin-right: 5px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1);
+    transition-duration: 0.3s;
+}
+
+.profile_btn:hover{
+    background-color: #3fc495;
+    color: white;
+}
+
+.account_edit{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.input_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px;;
+}
+
+.input_container label{
+    color: #5483b3;
+    font-size: 18px;
+}
+
+.input_container input{
+    height: 35px;
+    border: 1.5px solid gray;
+    border-radius: 5px;
+    color: black;
+    font-size: 17px;
+    padding: 5px;
+    text-transform: capitalize;
+}
+
+.input_container select{
+    height: 35px;
+    border: 1.5px solid gray;
+    border-radius: 5px;
+    color: black;
+    font-size: 17px;
+    text-transform: capitalize;
+}
+
+
+/* -------------------------------------
+    ALERT MESSAGE STYLES
+------------------------------------- */
+.message-box-failed{
+    margin-bottom: 15px;
+	color: #842029;
+	border: #f5c2c7;
+	text-align: center;
+    font-weight: bold;
+	padding: 16px;
+	background-color: #f8d7da;
+	border-radius: .25rem;
+}
+
+.message-box-info{
+	color: #055160;
+	border: #b6effb;
+	text-align: center;
+    font-weight: bold;
+	padding: 16px;
+	background-color: #cff4fc;
+	border-radius: .25rem;
+}
+
+.message-box-success{
+    width: 100%;
+    margin: auto;
+    margin-bottom: 15px;
+	color: #0f5132;
+	border: #badbcc;
+	text-align: center;
+    font-weight: bold;
+	padding: 16px;
+	background-color: #d1e7dd;
+	border-radius: .25rem;
+}
+
+
+/* -------------------------------------
+    RESPONSIVE AND MOBILE FRIENDLY STYLES
+------------------------------------- */
+@media only screen and (max-width: 768px) {
+    .sidebar {
+        width: 80px;
+        padding: 0.5rem;
+    }
+
+    .sidebar:hover {
+        width: 200px;
+    }
+
+    .menu a {
+        gap: 0.5rem;
+        font-size: 12px;
+    }
+
+    .header_wrapper {
+        padding: 10px 1rem;
+    }
+
+    .search_bar {
+        gap: 3px;
+        padding: 4px 8px;
+    }
+
+    .search_bar input {
+        padding: 8px;
+    }
+
+    .panel_content {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .sidebar {
+        width: 160px !important;
+        padding: 0.5rem !important;
+    }
+    .sidebar:hover {
+        width: 240px;
+    }
+    
+    .menu a {
+        gap: 0.3rem;
+        font-size: 10px;
+    }
+
+    .header_wrapper {
+        padding: 8px;
+    }
+
+    .search_bar {
+        gap: 2px;
+        padding: 2px 6px;
+    }
+
+    .search_bar input {
+        padding: 6px;
+    }
+
+    .panel_content {
+        width: calc(100% - 2rem);
+        margin: 0.5rem;
+    }
+
+    .table_wrapper {
+        padding: 2rem 2rem;
+        padding-left: 2rem;
+    }
+
+    .table_container {
+        width: 100%;
+        padding: 0;
+    }
+}
